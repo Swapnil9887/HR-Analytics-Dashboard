@@ -1,91 +1,128 @@
+Dataset
+The dataset utilized in this project is robust, comprising 26 columns covering a wide range of employee metrics. These metrics are carefully categorized to offer comprehensive insights into key areas such as demographics, job roles, job satisfaction, and engagement levels.
 
-# HR Analytics Dashboard using Power BI 
+Key features of the dataset include:
+Demographics:
 
-## Objective
-The objective of this project is to identify the key factors driving employee attrition and provide actionable insights for improving workforce retention in an organization. This dashboard offers a detailed analysis of employee attrition, empowering the HR team with data-driven insights for better decision-making.
+Name
+Office Location
+Age
+Gender
+Marital Status
+Job Metrics:
 
----
+Attrition Status
+Business Travel Frequency
+Department
+Job Role
+Job Level
+Monthly Income
+Total Years at Company
+Satisfaction Metrics:
 
-## Key Features
-- **Dive deep into HR data** to uncover valuable insights.
-- **Develop interactive dashboards** to visualize key HR metrics.
-- **Provide actionable recommendations** for strategic decision-making.
+Relationship Satisfaction
+Job Satisfaction
+Environment Satisfaction
+Work Metrics:
 
----
+Training Hours in the Last Year
+Work-Life Balance Rating
+Job Involvement Score
+Engagement Survey:
 
-## Steps Followed
+Measures employee satisfaction and engagement
+Key Information:
 
-### 1. Data Gathering
-- Imported raw `.csv` data into Power BI.
-- Transformed the data using Power Query Editor for cleaning and processing.
+Satisfaction Metrics include: Relationship Satisfaction, Job Satisfaction, Environment Satisfaction
+Work Metrics include: Training Hours Last Year, Work-Life Balance, Job Involvement
+Dataset Features:
 
-### 2. Data Cleaning
-- Removed empty columns, duplicates, and errors.
-- Renamed and standardized column values.
-- Detected and corrected data types using the Auto Detect function.
+Enriched with mappings of attrition trends
+Includes satisfaction ratings
+Contains engagement survey results
+Enables meaningful and actionable visualizations
+HR Analytics Dashboard Overview
+Provides key employee metrics.
+Includes summary statistics, charts, and interactive visualizations.
+Aims to enable workforce analysis.
+Page 01
+![image](https://github.com/user-attachments/assets/fa226eb3-de5b-4697-bb1a-60ff30cf4b0d)
+Page 02
+![image](https://github.com/user-attachments/assets/f580e4a3-4726-4084-900b-25a25282a694)
 
-### 3. Data Processing
-- Created a new column, **"AttritionCount"**, using the Conditional Column feature (`IF Attrition = 'Yes' THEN 1 ELSE 0`).
-- Created measures using DAX queries:
-  - **Attrition Rate** = `(SUM([AttritionCount])/SUM([EmployeeCount])) * 100`
-- Used these metrics to create various KPIs and charts.
+Employee Number
 
-### 4. Data Analysis
-- Designed visualizations like bar charts, KPIs, tables, pie charts, and more to present data in a clear and interactive format.
+Metric Shown: Total employees: 1,470.
+Purpose: Quick summary of workforce size.
+Job Satisfaction
 
----
+Visualization Type: Gauge Chart.
+Metric Shown: Average score: 2.73/5.
+Purpose: Indicates employee satisfaction; lower scores suggest need for improvement.
+Performance Rating
 
-## Key Dashboard Questions
-1. **What is the Total Employee Count?**
-2. **What is the employees' Average Age & Average Salary?**
-3. **What is the Attrition Count of men and women?**
-4. **What are the employees' Working Years at the Company?**
-5. **Which Department has the maximum employees?**
-6. **What is the Gender distribution?**
-7. **Which Education Field has the maximum employees?**
-8. **Which Business Travel type has the maximum employees?**
+Visualization Type: Gauge Chart.
+Metric Shown: Average rating: 3.15/5.
+Purpose: Measures employee performance; identifies support needs.
+Count of Employee Number by Gender
 
----
+Visualization Type: Horizontal Bar Chart.
+Metric Shown: Gender distribution:
+Male: 882 employees (66.7%).
+Female: 588 employees (33.3%).
+Purpose: Highlights gender diversity.
+Count of Employee Number by Age (Bins)
 
-## Tools & Techniques Learned
-- **Calculated Field**: Used to calculate Attrition Rate & Active Employees.
-- **Matrix Table**: Displayed Job Satisfaction ratings.
-- **Visualizations**: 
-  - Donut Chart
-  - Pie Chart
-  - Bar Chart
-  - Cluster Chart 📊
-- **KPIs**: Key Performance Indicators and Slicers.
-- **Filters**: Applied to data for insights by education field and more.
+Visualization Type: Histogram/Bar Chart.
+Metric Shown: Employee distribution by age:
+20s: 325 employees.
+30s: 229 employees.
+Fewer aged 50+.
+Purpose: Understands age demographics for workforce planning.
+Average Monthly Income by Job Role
 
----
+Visualization Type: Bar Chart.
+Metric Shown: Average income by role:
+Managers and Research Directors: ~$15K/month.
+Manufacturing Directors: ~$14K/month.
+Purpose: Analyzes income distribution for pay equity.
+Average Monthly Income by Office
 
-## Key Insights Summary
-- **Total Employees**: The organization has grown to **1470 employees**, showcasing significant growth.
-- **Attrition Analysis**:
-  - Total attrition: **237 employees**.
-  - Males: **150**, Females: **87** — Higher attrition among males.
-- **Departmental Attrition**:
-  - Research & Development experienced the highest attrition rate (**56.13%**).
-- **Education Field Impact**:
-  - Life sciences employees showed the highest attrition rate.
-- **Job Role Affected**:
-  - Sales roles had the highest attrition, indicating a need for targeted retention strategies.
-- **Education-wise Attrition**:
-  - High School education level had the highest attrition rate (**18.24%**).
-- **Attrition by Age Group**:
-  - Employees aged **25-34 years** had the highest attrition count (**112 employees**).
+Visualization Type: Bar Chart.
+Metric Shown: Average income by office:
+Barrie: $16.2K.
+Baltimore: $16.1K.
+Purpose: Insights into salary variations by location.
+Count of Employee Numbers by Latitude and Longitude
 
----
+Visualization Type: Geographical Map.
+Metric Shown: Employee distribution by office location in North America.
+Purpose: Represents geographic concentration for resource allocation.
+Key Influencers Analysis
 
-## Visualizations Used
-1. **Bar Charts**: For department-wise attrition analysis.
-2. **Pie & Donut Charts**: For gender and education distribution.
-3. **KPI Cards**: To display overall metrics like Total Employees and Attrition Rate.
-4. **Matrix Tables**: To show job satisfaction ratings.
-5. **Filters & Slicers**: For interactive data filtering.
+Visualization Type: Key Influencers Chart.
+Metric Shown: Factors influencing attrition:
+Overtime: 2.93X more likely to leave.
+Tenure ≤ 1 year: 2.70X more likely to leave.
+Single marital status: 2.18X more likely to leave.
+Purpose: Identifies drivers of turnover for HR focus.
+Insights
+High-risk groups: Younger employees, single employees, and those in Sales and Research roles.
+Key factors: Overtime, low tenure, and income dissatisfaction are leading causes of attrition.
+Engagement and satisfaction: Moderate levels indicate room for improvement.
+Suggestions for Improvement
+Job Satisfaction:
+Conduct employee engagement surveys.
+Offer wellness programs and recognize employee contributions.
+Performance Ratings:
+Provide training and regular feedback to improve performance.
+Gender Diversity:
+Promote equal opportunities and flexible working conditions.
+Conclusion
+Overall, Purpose of the Dashboard This dashboard provides an interactive and data-driven overview of key HR metrics, enabling stakeholders to:
 
----
-
-
+Analyse workforce demographics and satisfaction levels.
+Understand pay trends and employee distribution across locations.
+Identify critical factors driving attrition.
+Use actionable insights for decision-making to improve retention, satisfaction, and workforce efficiency.
 
