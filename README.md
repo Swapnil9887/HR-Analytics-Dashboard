@@ -1,4 +1,4 @@
-# Infosys-Springboard
+# HR Analytics Dashboard
 ### Dataset
 The dataset utilized in this project is robust, comprising 26 columns covering a wide range of employee metrics. These metrics are carefully categorized to offer comprehensive insights into key areas such as demographics, job roles, job satisfaction, and engagement levels. 
 
